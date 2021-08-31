@@ -4,7 +4,7 @@ metadata:
   name: pod1
   labels:
     app: helloworld
-specs:
+spec:
   containers:
   - name: k8s-demo
     image: arjunachari12/k8s-demo
