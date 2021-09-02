@@ -12,13 +12,23 @@ spec:
     - name: mysql-port
       containerPort: 3306
     env:
-      - name: SECRET_USERNAME
+      - name: username
         valueFrom:
           secretKeyRef:
-            name: mysecret
+            name: username
             key: username
-      - name: SECRET_PASSWORD
+      - name: password
         valueFrom:
           secretKeyRef:
-            name: mysecret
+            name: password
             key: password
+      - name: rootPassword
+        valueFrom:
+          secretKeyRef:
+            name: rootPassword
+            key: rootPassword
+      - name: database
+        valueFrom:
+          secretKeyRef:
+            name: database
+            key: database
